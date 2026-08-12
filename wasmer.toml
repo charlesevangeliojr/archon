@@ -1,0 +1,5 @@
+[package]
+name = "charlesevangeliojr/archon"
+version = "0.1.0"
+description = "Archon Laravel Application"
+readme = "README.md"
