@@ -33,7 +33,7 @@
 }
 
 .services-box {
-    background-image: url('/assets/shapes/bg-service.png');
+    background-image: var(--bg-service);
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -156,3 +156,4 @@
     background: var(--red);
     border-radius: 4px;
 }
+

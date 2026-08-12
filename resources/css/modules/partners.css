@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     gap: 0;
-    background: url("/assets/shapes/partners line stroke.png") no-repeat center;
+    background: var(--bg-partners-line) no-repeat center;
     background-size: contain;
     min-height: 85px;
     max-width: 1180px;
@@ -57,3 +57,4 @@
     filter: grayscale(0) brightness(1);
     opacity: 1;
 }
+

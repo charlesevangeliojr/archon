@@ -21,6 +21,20 @@
 
     {{-- Styles --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
+    {{-- Dynamic Background Images (Solves local dev / production path issues with Vite) --}}
+    <style>
+        :root {
+            --bg-banner: url('{{ asset('assets/images/bg-banner.png') }}');
+            --bg-service: url('{{ asset('assets/shapes/bg-service.png') }}');
+            --bg-rqst-quote: url('{{ asset('assets/shapes/bg-rqst quote.png') }}');
+            --bg-download: url('{{ asset('assets/images/download brochure.png') }}');
+            --bg-truck-shape: url('{{ asset('assets/shapes/bg-truck-shape.png') }}');
+            --bg-partners-line: url('{{ asset('assets/shapes/partners line stroke.png') }}');
+            --bg-article: url('{{ asset('assets/images/bg-article.png') }}');
+            --bg-world-map: url('{{ asset('assets/images/world map 2.png') }}');
+        }
+    </style>
 </head>
 <body>
 

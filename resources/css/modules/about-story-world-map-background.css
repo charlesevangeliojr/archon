@@ -6,7 +6,7 @@
 .about-story-map {
     position: absolute;
     inset: 0;
-    background-image: url('/assets/images/world map 2.png');
+    background-image: var(--bg-world-map);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -55,3 +55,4 @@
 .about-story-text p:last-child {
     margin-bottom: 0;
 }
+

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url('/assets/images/download brochure.png');
+    background-image: var(--bg-download);
     background-size: 90% 75%;
     background-position: center 70%;
     background-repeat: no-repeat;
@@ -68,3 +68,4 @@
     color: #fff;
     border-color: #fff;
 }
+

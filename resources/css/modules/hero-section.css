@@ -11,7 +11,7 @@
 .hero-bg-image {
     position: absolute;
     inset: 0;
-    background-image: url('/assets/images/bg-banner.png');
+    background-image: var(--bg-banner);
     background-size: cover;
     background-position: center;
     opacity: 1;
@@ -40,3 +40,4 @@
     align-items: center;
     min-height: calc(100vh - 88px);
 }
+
