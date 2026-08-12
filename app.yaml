@@ -1,5 +1,0 @@
----
-kind: wasmer.io/App.v0
-name: archon-laravel
-owner: charlesevangeliojr
-package: .
