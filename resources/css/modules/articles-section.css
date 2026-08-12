@@ -1,6 +1,6 @@
 /* ── Articles Section ── */
 .articles {
-    background: var(--bg-dark) url('../../public/assets/images/bg-article.png') center / cover no-repeat;
+    background: var(--bg-dark) url('/assets/images/bg-article.png') center / cover no-repeat;
 }
 
 .articles .container {

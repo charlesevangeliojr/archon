@@ -22,7 +22,7 @@
 .quote-inner-card {
     display: grid;
     grid-template-columns: 1.6fr 1fr;
-    background-image: url('../../public/assets/shapes/bg-rqst quote.png');
+    background-image: url('/assets/shapes/bg-rqst quote.png');
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;

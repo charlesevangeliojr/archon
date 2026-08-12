@@ -35,7 +35,7 @@
 
 .product-card:hover {
     transform: translateY(-8px);
-    background-image: url('../../public/assets/shapes/bg-truck-shape.png');
+    background-image: url('/assets/shapes/bg-truck-shape.png');
     background-size: 80% auto;
     background-position: center 20%;
     background-repeat: no-repeat;
