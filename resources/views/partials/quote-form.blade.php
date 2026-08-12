@@ -24,6 +24,7 @@
                             <input type="text" id="full_name" name="full_name"
                                    placeholder="Jack Benedict" required
                                    value="{{ old('full_name') }}"
+                                   autocomplete="name"
                                    aria-required="true">
                             @error('full_name')
                                 <span style="color:#c00;font-size:11px;">{{ $message }}</span>
@@ -34,6 +35,7 @@
                             <input type="email" id="email" name="email"
                                    placeholder="juan@email.com" required
                                    value="{{ old('email') }}"
+                                   autocomplete="email"
                                    aria-required="true">
                             @error('email')
                                 <span style="color:#c00;font-size:11px;">{{ $message }}</span>
@@ -59,6 +61,7 @@
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone"
                                    placeholder="+63 XXX XXX XXXX"
+                                   autocomplete="tel"
                                    value="{{ old('phone') }}">
                             @error('phone')
                                 <span style="color:#c00;font-size:11px;">{{ $message }}</span>

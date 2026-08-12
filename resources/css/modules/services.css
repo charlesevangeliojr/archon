@@ -1,0 +1,158 @@
+/* ── Services ── */
+.services {
+    background: var(--bg-dark);
+    padding-bottom: 120px;
+}
+
+.services-header-top {
+    padding-left: 30px;
+}
+
+.services .section-label {
+    margin-bottom: 16px;
+}
+
+.services-title {
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.15;
+    color: #fff;
+}
+
+.services-title em {
+    font-style: normal;
+    color: var(--gold);
+}
+
+.services-desc-top {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.services-box {
+    background-image: url('../../public/assets/shapes/bg-service.png');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    padding: 12px 30px 30px;
+    margin-top: -20px;
+}
+
+.services-box-desc {
+    font-size: 13.5px;
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.services-box-content {
+    display: flex;
+    gap: 40px;
+}
+
+.services-img {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.services-img img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+
+.services-list-wrapper {
+    flex: 1;
+    display: flex;
+    gap: 32px;
+}
+
+.service-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.service-item:first-child {
+    padding-top: 0;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.service-item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.service-item-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.service-item-name em {
+    font-style: normal;
+    color: var(--gold);
+}
+
+.service-sub-desc {
+    font-size: 13.5px;
+    color: #bbb;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.service-item-arrow {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 300;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.service-item:hover .service-item-arrow {
+    transform: translate(3px, -3px);
+}
+
+.services-scrollbar {
+    width: 4px;
+    position: relative;
+    padding: 24px 0;
+}
+
+.scrollbar-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 4px;
+    height: 70%;
+    background: var(--red);
+    border-radius: 4px;
+}

@@ -1,0 +1,113 @@
+/* ── Hero left column ── */
+.hero-content {
+    padding: 40px 48px 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: clamp(48px, 5vw, 84px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 32px;
+    color: #fff;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.hero-title .line-red {
+    color: var(--red);
+}
+
+.hero-title .line-gold {
+    color: var(--gold);
+}
+
+/* Standalone slider nav arrows — below title, right side */
+.hero-slider-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 28px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.hero-nav-arrow {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 64px;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s, transform 0.2s;
+    display: block;
+    width: 70px;
+    text-align: left;
+    letter-spacing: -2px;
+}
+
+.hero-nav-arrow--back {
+    margin-left: 12px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.hero-nav-arrow:hover {
+    color: var(--gold);
+}
+
+.hero-nav-arrow--back:hover {
+    color: #fff;
+}
+
+.hero-desc {
+    font-size: 12.5px;
+    color: #aaa;
+    max-width: 300px;
+    margin-top: -16px;
+    margin-bottom: 28px;
+    line-height: 1.8;
+}
+
+.hero-watch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold);
+    cursor: pointer;
+    transition: color 0.2s;
+    width: fit-content;
+}
+
+.hero-watch:hover {
+    color: var(--gold-light);
+}
+
+.hero-watch-icon {
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.hero-watch:hover .hero-watch-icon {
+    background: var(--gold);
+}
+
+.hero-watch-icon img {
+    width: 50px;
+    height: 50px;
+}

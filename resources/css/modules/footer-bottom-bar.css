@@ -1,0 +1,42 @@
+/* ── Footer Bottom Bar ── */
+.footer-bottom {
+    background: #111;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 18px 0;
+}
+
+.footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 11.5px;
+    color: #666;
+    padding: 0 160px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.footer-bottom-links a {
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--gold);
+}
+
+/* keep old selectors from breaking anything */
+.footer-bottom a {
+    color: #fff;
+}
+
+.footer-bottom a:hover {
+    color: var(--gold-light);
+}

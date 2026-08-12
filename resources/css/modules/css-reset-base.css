@@ -1,0 +1,68 @@
+/* ── CSS Reset & Base ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-dark: #151616;
+    --bg-dark2: #1c1c1c;
+    --bg-card: #1e1e1e;
+    --red: #9D0211;
+    --red-hover: #b5021b;
+    --gold: #CB9F53;
+    --gold-light: #e8b96a;
+    --gray-dark: #272727;
+    --text-white: #ffffff;
+    --text-light: #cccccc;
+    --text-muted: #888888;
+    --border: rgba(255, 255, 255, 0.1);
+    --border-dark: rgba(0, 0, 0, 0.08);
+    --font: 'Poppins', sans-serif;
+    --container: 1240px;
+    --radius: 6px;
+    --radius-lg: 12px;
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: var(--font);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: none;
+    margin: 0 auto;
+    padding: 0 160px;
+}

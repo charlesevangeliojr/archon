@@ -70,7 +70,7 @@
         <div class="newsletter-wrap">
             <form class="newsletter-form" id="newsletterForm" action="#" method="POST" novalidate>
                 @csrf
-                <input type="email" name="newsletter_email" placeholder="Enter your email to receive curated content, including industry alerts, news, and insights..." aria-label="Newsletter email address" required>
+                <input type="email" name="newsletter_email" autocomplete="email" placeholder="Enter your email to receive curated content, including industry alerts, news, and insights..." aria-label="Newsletter email address" required>
                 <button type="submit" id="newsletterSubmit">Subscribe</button>
             </form>
         </div>

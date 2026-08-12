@@ -1,0 +1,57 @@
+/* ── About Story — world map background ── */
+.about {
+    background: var(--bg-dark);
+}
+
+.about-story-map {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../public/assets/images/world map 2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-story-wrap {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+    margin-bottom: 120px;
+}
+
+.about-story {
+    position: relative;
+    padding: 40px 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    min-height: 240px;
+    grid-column: 2 / 4;
+}
+
+.about-story-text {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    max-width: 680px;
+    margin: 0 0 0 auto;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13.5px;
+    line-height: 1.85;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.about-story-text p {
+    margin-bottom: 18px;
+}
+
+.about-story-text p:last-child {
+    margin-bottom: 0;
+}

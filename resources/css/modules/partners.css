@@ -1,0 +1,59 @@
+/* ── Partners ── */
+.partners {
+    padding: 24px 0;
+    background: var(--bg-dark);
+}
+
+.partners .container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: url("../../public/assets/shapes/partners line stroke.png") no-repeat center;
+    background-size: contain;
+    min-height: 85px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+    flex-wrap: nowrap;
+}
+
+.partners-label {
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0 44px 0 0;
+    min-width: 160px;
+}
+
+.partners-divider {
+    display: none;
+}
+
+.partners-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex: 1;
+    flex-wrap: nowrap;
+    padding-left: 32px;
+}
+
+.partners-logos img {
+    height: 110px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    opacity: 1;
+    background: var(--bg-dark);
+    padding: 16px 24px;
+    border-radius: 90px;
+    margin: -70px 0 -24px;
+}
+
+.partners-logos img:hover {
+    filter: grayscale(0) brightness(1);
+    opacity: 1;
+}

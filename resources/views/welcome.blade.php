@@ -216,6 +216,29 @@
             }, 6000);
         }
 
+        /* ── Navbar ScrollSpy ───────────────────────────── */
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-links a, .mobile-menu a');
+        
+        const scrollSpyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, {
+            rootMargin: '-20% 0px -70% 0px' // Trigger when section is around top of the screen
+        });
+
+        sections.forEach(sec => {
+            scrollSpyObserver.observe(sec);
+        });
+
     });
     </script>
 

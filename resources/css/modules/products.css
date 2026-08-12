@@ -1,0 +1,152 @@
+/* ── Products ── */
+.products {
+    padding: 40px 0 72px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.section-header h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 700;
+    color: #fff;
+}
+
+.section-header h2 em {
+    font-style: normal;
+    color: #fff;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: transparent;
+    border-radius: var(--radius-lg);
+    overflow: visible;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.4s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    background-image: url('../../public/assets/shapes/bg-truck-shape.png');
+    background-size: 80% auto;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: none;
+}
+
+.product-img {
+    position: relative;
+    background: transparent;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.08) translateY(-4px);
+}
+
+/* Extra zoom when hovering the Quick View button */
+.product-card:has(.btn-red:hover) .product-img img {
+    transform: scale(1.18) translateY(-10px);
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--red);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.product-info {
+    padding: 18px 16px;
+    text-align: center;
+}
+
+.product-colors {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+.color-swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.color-swatch[style*="#ffffff"],
+.color-swatch[style*="#fff"] {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.color-swatch.active {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.product-type {
+    font-size: 11.5px;
+    color: #666;
+    margin-bottom: 14px;
+    display: none;
+}
+
+.product-actions {
+    display: none;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.product-card:hover .product-colors {
+    display: none;
+}
+
+.product-card:hover .product-actions {
+    display: flex;
+}
+
+.product-actions .btn {
+    width: auto;
+    justify-content: center;
+    font-size: 16px;
+    padding: 4px 14px;
+    border-radius: 999px;
+}

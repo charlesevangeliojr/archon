@@ -1,0 +1,42 @@
+/* ── Footer ── */
+.footer {
+    background: var(--bg-dark);
+    padding: 0;
+}
+
+.footer-inner {
+    padding: 56px 160px;
+}
+
+.footer-box {
+    display: grid;
+    grid-template-columns: 1.1fr 0.8fr 1.1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "contact links brand"
+        "contact newsletter newsletter"
+        "bottom bottom bottom";
+    gap: 60px;
+    padding: 48px;
+    background: #222;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    align-items: start;
+}
+
+.footer-bottom-box {
+    grid-area: bottom;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 32px;
+    padding: 24px;
+    background: #888;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}

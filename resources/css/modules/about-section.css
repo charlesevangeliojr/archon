@@ -1,0 +1,144 @@
+/* ── About Section ── */
+.about {
+    background: var(--bg-dark);
+    color: #fff;
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about .container {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+}
+
+.about-container {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.about-box {
+    background: #222;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 56px 160px 30px;
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    position: relative;
+    overflow: hidden;
+    transition: padding 0.3s ease;
+}
+
+:root {
+    --container-pad: 32px;
+}
+
+.about-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 40px;
+    display: block;
+    margin-top: 8px;
+}
+
+.about-header {
+    font-size: clamp(22px, 2.8vw, 34px);
+    font-weight: 700;
+    color: #fff;
+    max-width: 1000px;
+    line-height: 1.35;
+    margin-bottom: 52px;
+}
+
+.about-header .line {
+    display: block;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 0;
+}
+
+/* Card 04 spans 1 column on left side, next row */
+.feature-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    padding: 28px 24px 24px;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    cursor: default;
+    backdrop-filter: blur(4px);
+    height: 100%;
+    min-height: 240px;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.feature-card:hover .feature-number {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.feature-card:hover .feature-title {
+    color: #fff;
+}
+
+.feature-card:hover .feature-desc {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.feature-card:hover .feature-icon img {
+    filter: brightness(10);
+}
+
+.feature-number {
+    font-size: 26px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.feature-icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.feature-icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(600%) hue-rotate(5deg) brightness(95%) contrast(90%);
+    transition: filter 0.3s;
+}
+
+.feature-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.feature-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+}

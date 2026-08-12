@@ -1,0 +1,61 @@
+/* ── Buttons ── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 32px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    letter-spacing: 0.3px;
+}
+
+.btn-red {
+    background: var(--red);
+    color: #fff;
+    border-color: var(--red);
+    border-radius: 999px;
+}
+
+.btn-red:hover {
+    background: var(--red-hover);
+    border-color: var(--red-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(157, 2, 17, 0.45);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.btn-outline:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-gold {
+    background: transparent;
+    color: #111;
+    border: 2px solid #111;
+    font-weight: 700;
+}
+
+.btn-gold:hover {
+    background: #111;
+    color: #fff;
+}
+
+.btn-sm {
+    padding: 8px 22px;
+    font-size: 12px;
+}
+
+.btn-arrow::after {
+    content: '→';
+    font-size: 15px;
+}

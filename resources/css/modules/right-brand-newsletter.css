@@ -1,0 +1,97 @@
+/* ── Right: Brand + Newsletter ── */
+.footer-brand-col {
+    grid-area: brand;
+}
+
+.footer-brand-logo {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.footer-brand-logo img {
+    height: 48px;
+    width: auto;
+}
+
+.footer-brand-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.footer-brand-desc {
+    font-size: 12.5px;
+    color: #888;
+    line-height: 1.75;
+    margin-bottom: 28px;
+}
+
+/* Newsletter form — white card style */
+.newsletter-wrap {
+    grid-area: newsletter;
+    align-self: center;
+    transform: translateY(-8px);
+    background: #888;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.newsletter-form {
+    display: flex;
+    background: #fff;
+    border: 1px solid #888;
+    border-radius: 12px;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.newsletter-form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 18px 20px;
+    color: #555;
+    font-size: 13.5px;
+    outline: none;
+    font-family: var(--font);
+}
+
+.newsletter-form input::placeholder {
+    color: #bbb;
+    font-size: 13px;
+}
+
+.newsletter-form button {
+    background: #888;
+    color: #fff;
+    border: none;
+    padding: 18px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-family: var(--font);
+    white-space: nowrap;
+    border-left: 1px solid #eee;
+    position: relative;
+}
+
+.newsletter-form button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--red);
+}
+
+.newsletter-form button:hover {
+    color: #fff;
+}

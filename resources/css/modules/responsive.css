@@ -1,0 +1,265 @@
+/* ── Responsive ── */
+@media (min-width: 1441px) {
+    .partners-label {
+        padding-left: 28px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 80px;
+    }
+
+    .hero-inner {
+        padding: 0 80px;
+    }
+
+    .navbar .container {
+        padding: 0 80px;
+    }
+
+    .quote-section .container {
+        padding: 0 80px;
+    }
+
+    .partners .container {
+        padding: 0 80px;
+    }
+
+    .about-box {
+        padding: 56px 80px;
+    }
+
+    .footer-inner {
+        padding: 56px 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .hero-inner {
+        padding: 0 40px;
+    }
+
+    .navbar .container {
+        padding: 0 40px;
+    }
+
+    .quote-section .container {
+        padding: 0 40px;
+    }
+
+    .partners .container {
+        padding: 0 40px;
+    }
+
+    .about-box {
+        padding: 56px 40px;
+    }
+
+    .footer-inner {
+        padding: 56px 40px;
+    }
+
+    .hero-content {
+        padding: 40px 24px 40px 0;
+    }
+
+    .hero-right {
+        padding: 40px 0 40px 24px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-story-wrap {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .topbar {
+        display: none;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-actions {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 0 24px;
+        min-height: auto;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 60px 0;
+    }
+
+    .quote-inner-card {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-side-panel {
+        display: none;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .partners .container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 0 24px;
+    }
+
+    .partners-label {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .partners-logos {
+        padding-left: 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-story-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .about-story {
+        padding: 32px 24px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .services-badge {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "contact"
+            "links"
+            "brand"
+            "newsletter"
+            "bottom";
+        gap: 32px;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .container {
+        padding: 0 24px;
+        height: 72px;
+    }
+
+    .quote-section .container {
+        padding: 0 24px;
+    }
+
+    .about-box {
+        padding: 48px 24px;
+    }
+
+    .footer-inner {
+        padding: 48px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-box {
+        padding: 40px 16px;
+    }
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .quote-section .container {
+        padding: 0 16px;
+    }
+
+    .partners .container {
+        padding: 0 16px;
+    }
+
+    .hero-nav-arrow {
+        font-size: 36px;
+    }
+
+    .hero-inner {
+        padding: 0 16px;
+    }
+
+    .navbar .container {
+        padding: 0 16px;
+    }
+
+    .footer-inner {
+        padding: 48px 16px;
+    }
+}

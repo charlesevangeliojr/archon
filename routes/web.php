@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Models\Quote;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,21 +17,34 @@ Route::get('/', function () {
 
 // Quote form submission
 Route::post('/quote', function (Request $request) {
-    $request->validate([
-        'first_name' => 'required|string|max:100',
-        'last_name'  => 'required|string|max:100',
+    $validated = $request->validate([
+        'full_name'  => 'required|string|max:200',
         'email'      => 'required|email|max:255',
-        'phone'      => 'required|string|max:30',
+        'phone'      => 'nullable|string|max:30',
         'product'    => 'nullable|string|max:100',
         'message'    => 'nullable|string|max:2000',
         'privacy'    => 'accepted',
     ]);
 
-    // TODO: Add email notification or DB save here in future phases
-    // Mail::to('sales@archon.com.ph')->send(new QuoteRequestMail($request->all()));
+    // Save to database
+    Quote::create([
+        'full_name' => $validated['full_name'],
+        'email'     => $validated['email'],
+        'phone'     => $validated['phone'] ?? null,
+        'product'   => $validated['product'] ?? null,
+        'message'   => $validated['message'] ?? null,
+    ]);
+
+    // TODO: Add email notification here in future phases
 
     return redirect()->route('home')
         ->with('quote_success', true)
         ->withFragment('quote');
 
 })->name('quote.submit');
+
+// Admin Routes
+Route::get('/admin/quotes', function () {
+    $quotes = Quote::orderBy('created_at', 'desc')->get();
+    return view('admin.quotes', compact('quotes'));
+})->name('admin.quotes');

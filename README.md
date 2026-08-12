@@ -1,58 +1,132 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+  <img src="public/assets/logo/Archon Logo.png" alt="Archon Logo" width="300"/>
+  <h1>Archon Special Machineries Inc.</h1>
+  <p><strong>Premium Heavy Duty Truck Provider & Official Distributor of Sinotruk Howo in the Philippines</strong></p>
+  <br />
+  <p>🚀 <strong>Live Demo:</strong> <a href="https://archon.wasmer.app" target="_blank">archon.wasmer.app</a></p>
+</div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+## 📖 Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Archon is the leading provider and top distributor of **Sinotruk Howo** heavy equipment in the Philippines. This web application serves as the primary digital storefront and lead generation platform for Archon Special Machineries Inc.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Built with **Laravel 11**, the platform features a highly optimized, modern, glassmorphic UI with advanced CSS animations to project a premium brand image. It includes a custom-built, modular asset pipeline via **Vite** and a secure, responsive backend to manage quotation requests seamlessly.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✨ Key Features
 
-## Learning Laravel
+- **Premium UI/UX:** Stunning dark-mode aesthetic with custom glassmorphism, dynamic scroll reveal animations, and micro-interactions.
+- **Custom Modular CSS System:** A highly maintainable `app.css` architecture split into 26 modular files for rapid scaling and performance.
+- **Dynamic ScrollSpy Navigation:** An intelligent navigation bar that updates dynamically based on viewport intersection.
+- **Integrated Quotation System:** A secure, database-backed "Request a Quote" pipeline designed for maximum conversion.
+- **Admin Dashboard:** A real-time data table utilizing Tailwind CSS for rapid, beautiful management of incoming leads.
+- **SEO & Accessibility Optimized:** Fully compliant with modern web accessibility standards (ARIA roles, autocomplete, semantic HTML) and SEO meta tags.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Technology Stack
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Framework:** Laravel 11 (PHP 8.2+)
+- **Frontend Assets:** HTML5, Modular CSS3, Vanilla ES6 JavaScript
+- **Asset Bundler:** Vite
+- **Database:** MySQL
+- **Rapid Prototyping (Admin):** Tailwind CSS CDN
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 🚀 Getting Started
 
-## Agentic Development
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### Prerequisites
 
-```bash
-composer require laravel/boost --dev
+- **PHP** >= 8.2
+- **Composer**
+- **Node.js** & **NPM**
+- **MySQL** Database
 
-php artisan boost:install
-```
+### Installation
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-org/archon.git
+   cd archon
+   ```
 
-## Contributing
+2. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Install NPM dependencies**
+   ```bash
+   npm install
+   ```
 
-## Code of Conduct
+4. **Environment Setup**
+   Copy the example environment file and configure your database settings:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   *Update your `.env` with the correct database credentials.*
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Database Migration**
+   Run the migrations to create the required tables (e.g., `quotes` table):
+   ```bash
+   php artisan migrate
+   ```
 
-## Security Vulnerabilities
+6. **Start Development Servers**
+   You will need two terminal tabs to run the backend and the frontend bundler concurrently.
+   
+   *Terminal 1 (Laravel server):*
+   ```bash
+   php artisan serve
+   ```
+   
+   *Terminal 2 (Vite bundler):*
+   ```bash
+   npm run dev
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Visit the Application**
+   Open `http://localhost:8000` in your browser.
 
-## License
+## ☁️ Deployment (Wasmer)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This application is built to be deployed seamlessly on **Wasmer Edge** utilizing WebAssembly.
+
+1. **Install Wasmer CLI**
+   ```bash
+   curl https://get.wasmer.io -sSfL | sh
+   ```
+
+2. **Configure Environment Variables**
+   Since `.env` files are blocked from GitHub for security, you must configure your production environment variables (like Database credentials) directly in the **Wasmer Edge Dashboard** under your application settings, or pass them as secrets during deployment.
+
+3. **Configure App**
+   Ensure your `wasmer.toml` file is configured correctly for a Laravel/PHP environment.
+
+4. **Deploy**
+   Deploy the application directly to Wasmer Edge:
+   ```bash
+   wasmer deploy
+   ```
+
+## 📂 Project Structure Highlights
+
+- `resources/css/modules/`: Contains the modular CSS files (e.g., `navbar.css`, `products.css`, `hero.css`).
+- `resources/views/welcome.blade.php`: The primary landing page template.
+- `resources/views/partials/`: Reusable Blade components like `navbar`, `footer`, and `quote-form`.
+- `resources/views/admin/quotes.blade.php`: The admin dashboard for managing leads.
+- `app/Models/Quote.php`: Eloquent model handling quote form submissions.
+
+## 🔒 Security & Performance
+
+- **CSRF Protection:** Fully integrated Laravel CSRF tokens on all forms.
+- **Content Security Policy (CSP):** Configured to allow essential scripts while blocking unauthorized code evaluation.
+- **Lazy Loading:** Images and assets are optimized with `loading="lazy"` to ensure blazing fast First Contentful Paint (FCP).
+
+---
+
+<div align="center">
+  <p>Developed with ❤️ for <strong>Archon Special Machineries Inc.</strong></p>
+</div>
