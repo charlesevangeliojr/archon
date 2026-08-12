@@ -5,7 +5,7 @@ description = "Archon Laravel Application"
 readme = "README.md"
 
 [dependencies]
-"php/php" = "8.2"
+"php/php" = "^8.3"
 
 [fs]
 "/app" = "."
