@@ -41,4 +41,4 @@ jobs:
           token: ${{ secrets.WASMER_TOKEN }}
 
       - name: Deploy to Wasmer Edge
-        run: wasmer deploy --non-interactive
+        run: wasmer deploy --non-interactive --token ${{ secrets.WASMER_TOKEN }}
