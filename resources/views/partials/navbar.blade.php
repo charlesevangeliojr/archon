@@ -25,8 +25,8 @@
         </button>
     </div>
 
-    {{-- Mobile Menu --}}
-    <div class="mobile-menu" id="mobileMenu">
+    {{-- Mobile Menu (full-screen overlay) --}}
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu">
         <a href="#about">About Us</a>
         <a href="#products">Products</a>
         <a href="#services">Services</a>

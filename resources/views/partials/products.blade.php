@@ -21,7 +21,7 @@
                         <span class="color-swatch" style="background:#1E2460;" title="Navy Blue" aria-label="Navy Blue"></span>
                     </div>
                     <div class="product-actions">
-                        <a href="#quote" class="btn btn-red btn-sm" aria-label="Quick View Howo V7-X">Quick View</a>
+                        <button class="btn btn-red btn-sm quick-view-btn" aria-label="Quick View Howo V7-X" data-title="Howo V7-X">Quick View</button>
                         <a href="#" class="btn btn-outline btn-sm" aria-label="Compare Howo V7-X">Compare</a>
                     </div>
                     <h3 class="product-name">Howo V7-X Dump Truck</h3>
@@ -40,7 +40,7 @@
                         <span class="color-swatch" style="background:#1E2460;" title="Navy Blue" aria-label="Navy Blue"></span>
                     </div>
                     <div class="product-actions">
-                        <a href="#quote" class="btn btn-red btn-sm" aria-label="Quick View Howo E7">Quick View</a>
+                        <button class="btn btn-red btn-sm quick-view-btn" aria-label="Quick View Howo E7" data-title="Howo E7">Quick View</button>
                         <a href="#" class="btn btn-outline btn-sm" aria-label="Compare Howo E7">Compare</a>
                     </div>
                     <h3 class="product-name">Howo E7 Dump Truck</h3>
@@ -59,7 +59,7 @@
                         <span class="color-swatch" style="background:#1E2460;" title="Navy Blue" aria-label="Navy Blue"></span>
                     </div>
                     <div class="product-actions">
-                        <a href="#quote" class="btn btn-red btn-sm" aria-label="Quick View Howo TX">Quick View</a>
+                        <button class="btn btn-red btn-sm quick-view-btn" aria-label="Quick View Howo TX" data-title="Howo TX">Quick View</button>
                         <a href="#" class="btn btn-outline btn-sm" aria-label="Compare Howo TX">Compare</a>
                     </div>
                     <h3 class="product-name">Howo TX Dump Truck</h3>
@@ -78,7 +78,7 @@
                         <span class="color-swatch" style="background:#1E2460;" title="Navy Blue" aria-label="Navy Blue"></span>
                     </div>
                     <div class="product-actions">
-                        <a href="#quote" class="btn btn-red btn-sm" aria-label="Quick View Howo A7 Prime Mover">Quick View</a>
+                        <button class="btn btn-red btn-sm quick-view-btn" aria-label="Quick View Howo A7 Prime Mover" data-title="Howo A7 Prime Mover">Quick View</button>
                         <a href="#" class="btn btn-outline btn-sm" aria-label="Compare Howo A7 Prime Mover">Compare</a>
                     </div>
                     <h3 class="product-name">Howo A7|T7 Prime Mover</h3>
@@ -97,7 +97,7 @@
                         <span class="color-swatch" style="background:#1E2460;" title="Navy Blue" aria-label="Navy Blue"></span>
                     </div>
                     <div class="product-actions">
-                        <a href="#quote" class="btn btn-red btn-sm" aria-label="Quick View Howo 7 Prime">Quick View</a>
+                        <button class="btn btn-red btn-sm quick-view-btn" aria-label="Quick View Howo 7 Prime" data-title="Howo 7 Prime">Quick View</button>
                         <a href="#" class="btn btn-outline btn-sm" aria-label="Compare Howo 7 Prime">Compare</a>
                     </div>
                     <h3 class="product-name">Howo 7 Prime Truck</h3>
@@ -116,7 +116,7 @@
                         <span class="color-swatch" style="background:#1E2460;" title="Navy Blue" aria-label="Navy Blue"></span>
                     </div>
                     <div class="product-actions">
-                        <a href="#quote" class="btn btn-red btn-sm" aria-label="Quick View Howo A7 Dump">Quick View</a>
+                        <button class="btn btn-red btn-sm quick-view-btn" aria-label="Quick View Howo A7 Dump" data-title="Howo A7 Dump">Quick View</button>
                         <a href="#" class="btn btn-outline btn-sm" aria-label="Compare Howo A7 Dump">Compare</a>
                     </div>
                     <h3 class="product-name">Howo A7|T7 Dump Truck</h3>
@@ -126,3 +126,4 @@
         </div>
     </div>
 </section>
+

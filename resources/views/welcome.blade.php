@@ -73,6 +73,16 @@
     {{-- Scroll to Top Button --}}
     <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top" title="Back to top">↑</button>
 
+    {{-- Quick View Modal --}}
+    <div class="quick-view-modal" id="quickViewModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <img src="" alt="Product Image" id="modalImg">
+            <h3 id="modalTitle"></h3>
+        </div>
+    </div>
+
     {{-- Inline JavaScript ──────────────────────────────────── --}}
     <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -116,27 +126,43 @@
         const hamburger  = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
 
-        hamburger.addEventListener('click', function () {
-            const isOpen = mobileMenu.classList.toggle('active');
-            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            // Animate bars
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
             const bars = hamburger.querySelectorAll('span');
-            if (isOpen) {
-                bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                bars[1].style.opacity   = '0';
-                bars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            bars[1].style.opacity   = '0';
+            bars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            hamburger.querySelectorAll('span').forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
+        }
+
+        hamburger.addEventListener('click', function () {
+            if (mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
             } else {
-                bars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
+                openMobileMenu();
             }
         });
 
         // Close mobile menu on nav link click
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-                hamburger.querySelectorAll('span').forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
+                closeMobileMenu();
             });
+        });
+
+        // Close on resize to desktop width
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
         });
 
         /* ── Scroll to Top ──────────────────────────────── */
@@ -163,6 +189,18 @@
                 this.classList.add('active');
             });
         });
+
+        /* ── Product Card — tap support on mobile ───────── */
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.addEventListener('click', function (e) {
+                    if (e.target.closest('.btn')) return;
+                    document.querySelectorAll('.product-card').forEach(c => c.classList.remove('touch-active'));
+                    this.classList.toggle('touch-active');
+                });
+            });
+        }
+
 
         /* ── Color Swatch Picker ────────────────────────── */
         document.querySelectorAll('.product-colors').forEach(group => {
@@ -251,6 +289,70 @@
 
         sections.forEach(sec => {
             scrollSpyObserver.observe(sec);
+        });
+
+        /* ── Quick View Modal Logic ─────────────────────── */
+        const modal = document.getElementById('quickViewModal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalCloseBtn = document.getElementById('modalClose');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+
+        const openModal = (imgSrc, titleText) => {
+            modalImg.src = imgSrc;
+            modalTitle.textContent = titleText;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            setTimeout(() => { 
+                modalImg.src = ''; 
+                modalImg.classList.remove('zoomed');
+                modalImg.style.transformOrigin = 'center center';
+            }, 300); // clear img after transition
+        };
+
+        // Attach click to all Quick View buttons
+        document.querySelectorAll('.quick-view-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const card = this.closest('.product-card');
+                const imgSrc = card.querySelector('.product-img img').src;
+                const titleText = this.getAttribute('data-title');
+                openModal(imgSrc, titleText);
+            });
+        });
+
+        // Close bindings
+        if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+        if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+        
+        if (modalImg) {
+            modalImg.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('zoomed');
+            });
+            modalImg.addEventListener('mousemove', function(e) {
+                if (this.classList.contains('zoomed')) {
+                    const x = (e.offsetX / this.offsetWidth) * 100;
+                    const y = (e.offsetY / this.offsetHeight) * 100;
+                    this.style.transformOrigin = `${x}% ${y}%`;
+                }
+            });
+            modalImg.addEventListener('mouseleave', function() {
+                this.style.transformOrigin = 'center center';
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
         });
 
     });

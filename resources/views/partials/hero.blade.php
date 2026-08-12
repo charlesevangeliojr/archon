@@ -28,6 +28,13 @@
                 </span>
                 Watch Video
             </div>
+
+            {{-- Slider dots (visible on mobile) --}}
+            <div class="hero-slider-dots" aria-label="Slide indicators" role="tablist">
+                <button class="slider-dot active" data-index="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+                <button class="slider-dot" data-index="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+                <button class="slider-dot" data-index="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+            </div>
         </div>
 
         {{-- Right Column --}}

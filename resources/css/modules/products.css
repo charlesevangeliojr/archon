@@ -135,11 +135,13 @@
     margin-bottom: 16px;
 }
 
-.product-card:hover .product-colors {
+.product-card:hover .product-colors,
+.product-card.touch-active .product-colors {
     display: none;
 }
 
-.product-card:hover .product-actions {
+.product-card:hover .product-actions,
+.product-card.touch-active .product-actions {
     display: flex;
 }
 
