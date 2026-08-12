@@ -128,5 +128,5 @@ This application is built to be deployed seamlessly on **Wasmer Edge** utilizing
 ---
 
 <div align="center">
-  <p>Developed with ❤️ for <strong>Archon Special Machineries Inc.</strong></p>
+  <p>Developed with ❤️ for <strong>Archon Special Machineries Inc.</strong> by <a href="https://github.com/charlesevangeliojr">charlesevangeliojr</a></p>
 </div>
