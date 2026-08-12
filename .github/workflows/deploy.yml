@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install NPM dependencies
         run: npm ci
@@ -37,8 +37,10 @@ jobs:
 
       - name: Setup Wasmer CLI
         uses: wasmerio/setup-wasmer@v3
-        with:
-          token: ${{ secrets.WASMER_TOKEN }}
+        env:
+          WASMER_TOKEN: ${{ secrets.WASMER_TOKEN }}
 
       - name: Deploy to Wasmer Edge
-        run: wasmer deploy --non-interactive --owner charlesevangeliojr --token ${{ secrets.WASMER_TOKEN }}
+        run: wasmer deploy --non-interactive --owner charlesevangeliojr
+        env:
+          WASMER_TOKEN: ${{ secrets.WASMER_TOKEN }}
