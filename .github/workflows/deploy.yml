@@ -23,6 +23,8 @@ jobs:
 
       - name: Install PHP dependencies (Composer)
         run: composer install --no-dev --optimize-autoloader --no-interaction
+        env:
+          COMPOSER_NO_AUDIT: 1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
